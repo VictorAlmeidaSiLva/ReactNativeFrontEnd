@@ -11,7 +11,7 @@ export default function Login({ navigation }) {
                 <TextInput style={styles.input} placeholder='Senha' secureTextEntry={true} />
             </View>
             <View style={styles.space2}>
-                <TouchableHighlight style={styles.button}>
+                <TouchableHighlight style={styles.button} onPress={() => navigation.navigate('Home')}>
                     <Text style={styles.buttonText}>Enviar</Text>
                 </TouchableHighlight>
                 <TouchableHighlight style={styles.button} onPress={() => navigation.navigate('Register')}>

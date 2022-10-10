@@ -3,8 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import Home from '../Pages/Home'
-import Login from '../Pages/Login'
-import Register from '../Pages/Register'
+import  Settings  from '../Pages/Settings';
 
 const Tab = createBottomTabNavigator();
 
@@ -19,7 +18,7 @@ export default function RoutesTab() {
                         iconName = focused
                             ? 'ios-information-circle'
                             : 'ios-information-circle-outline';
-                    } else if (route.name === 'Login') {
+                    } else if (route.name === 'Settings') {
                         iconName = focused ? 'ios-list-box' : 'ios-list';
                     }
                     else if (route.name === 'Register') {
@@ -33,8 +32,7 @@ export default function RoutesTab() {
             })}
         >
             <Tab.Screen name="Home" component={Home} />
-            <Tab.Screen name="Login" component={Login} />
-            <Tab.Screen name="Register" component={Register} />
+            <Tab.Screen name="Settings" component={Settings} />
         </Tab.Navigator>
     );
 }
